@@ -12,3 +12,9 @@
     url: "{{ .lazygit_base_url }}/v{{ .lazygit_version }}/lazygit_{{ .lazygit_version }}_{{ .chezmoi.os }}_{{ .chezmoi.arch | replace "amd64" "x86_64" }}.tar.gz"
     include: 
       - "lazygit"
+"bin/nvim":
+    type: "archive"
+    url: "https://github.com/neovim/neovim/releases/download/nightly/nvim-{{ .chezmoi.os | replace "darwin" "macos" }}-{{- .chezmoi.arch -}}.tar.gz"
+    exact: true
+    stripComponents: 1
+    refreshPeriod: "168h"
