@@ -1,10 +1,5 @@
 # vim: syntax=bash
 
-# Setup the correct LANG
-
-export LC_ALL="en_US.UTF8"
-export LANG="en_US.UTF8"
-
 # Add folders to PATH
 
 if [[ -d ${HOME}/bin/nvim/bin ]]; then
