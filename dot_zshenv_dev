@@ -2,8 +2,8 @@
 
 # Add folders to PATH
 
-if [[ -d ${HOME}/bin/nvim/bin ]]; then
-  PATH="${HOME}/bin/nvim/bin:${PATH}"
+if [[ -d ${HOME}/.tools/nvim/bin ]]; then
+  PATH="${HOME}/.tools/nvim/bin:${PATH}"
 fi
 
 if [[ -d ${HOME}/.tools/npm/bin ]]; then
