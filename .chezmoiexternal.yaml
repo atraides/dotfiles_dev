@@ -18,3 +18,9 @@
     exact: true
     stripComponents: 1
     refreshPeriod: "168h"
+".tools/npm":
+    type: "archive"
+    url: "https://nodejs.org/dist/{{ .nodejs_version }}/node-{{ .nodejs_version }}-{{ .chezmoi.os }}-{{ .chezmoi.arch | replace "amd64" "x64" }}.tar.gz"
+    exact: true
+    stripComponents: 1
+    refreshPeriod: "168h"
