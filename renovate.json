@@ -1,18 +1,29 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:base", ":dependencyDashboard"],
+  "extends": [
+    "config:recommended",
+    ":dependencyDashboard"
+  ],
   "timezone": "Europe/Budapest",
-  "schedule": ["before 5am"],
-  "regexManagers": [
+  "schedule": [
+    "before 5am"
+  ],
+  "customManagers": [
     {
-      "fileMatch": ["^\\.chezmoidata\\.yaml$"],
+      "customType": "regex",
+      "managerFilePatterns": [
+        "/^\\.chezmoidata\\.yaml$/"
+      ],
       "matchStrings": [
         "datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s.*?_version:\\s+\"(?<currentValue>v?\\d+\\.\\d+\\.\\d+)\".*"
       ],
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
     },
     {
-      "fileMatch": ["^\\.chezmoidata\\.yaml$"],
+      "customType": "regex",
+      "managerFilePatterns": [
+        "/^\\.chezmoidata\\.yaml$/"
+      ],
       "matchStrings": [
         "datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s.*?_version:\\s+\"(?<currentValue>.*\\d+\\.\\d+d\\d+e\\d+)\".*"
       ],
