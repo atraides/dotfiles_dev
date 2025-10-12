@@ -14,7 +14,7 @@
       - "lazygit"
 ".tools/nvim":
     type: "archive"
-    url: "https://github.com/neovim/neovim/releases/download/v{{ .nvim_version }}/nvim-{{ .chezmoi.os | replace "darwin" "macos" }}-{{- .chezmoi.arch -}}.tar.gz"
+    url: "https://github.com/neovim/neovim/releases/download/v{{ .nvim_version }}/nvim-{{ .chezmoi.os | replace "darwin" "macos" }}-{{- .chezmoi.arch | replace "amd64" "x86_64" -}}.tar.gz"
     exact: true
     stripComponents: 1
     refreshPeriod: "168h"
