@@ -9,10 +9,8 @@ edit:
   command: "vi"
 
 data:
-{{- if eq .chezmoi.os "darwin" -}}
+  {{ if eq .chezmoi.os "darwin" }}
   doge_os_suffix: "apple-darwin-universal2"
-{{- else if eq .chezmoi.os "linux" -}}
+  {{ else if eq .chezmoi.os "linux" }}
   doge_os_suffix: "{{ .chezmoi.os | replace "amd64" "x86_64" }}-unknown-linux-musl"
-{{- else -}}
-  doge_os_suffix: ""
-{{- end }}
+  {{ end }}
