@@ -18,6 +18,11 @@
     stripComponents: 1
     executable: true
     path: "doggo"
+"bin/dog":
+    type: "archive-file"
+    url: "{{ .doge_base_url }}/{{ .doge_version }}/doge-{{ .doge_version }}-{{ .doge_os_suffix }}.zip"
+    executable: true
+    path: "doge-{{ .doge_version }}-{{ .doge_os_suffix }}"
 ".tools/nvim":
     type: "archive"
     url: "https://github.com/neovim/neovim/releases/download/v{{ .nvim_version }}/nvim-{{ .chezmoi.os | replace "darwin" "macos" }}-{{- .chezmoi.arch | replace "amd64" "x86_64" -}}.tar.gz"
