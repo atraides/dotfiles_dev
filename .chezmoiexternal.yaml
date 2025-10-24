@@ -15,6 +15,7 @@
 "bin/doggo":
     type: "archive-file"
     url: "{{ .doggo_base_url }}/v{{ .doggo_version }}/doggo_{{ .doggo_version }}_{{ .chezmoi.os | title }}_{{ .chezmoi.arch | replace "amd64" "x86_64" }}.tar.gz"
+    stripComponents: 1
     executable: true
     path: "doggo"
 ".tools/nvim":
