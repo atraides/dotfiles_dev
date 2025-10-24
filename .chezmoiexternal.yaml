@@ -14,7 +14,7 @@
       - "lazygit"
 "bin/":
     type: "archive"
-    url: "{{ .doggo_base_url }}/v{{ .doggo_version }}/doggo_{{ .doggo_version }}_{{ .chezmoi.os }}_{{ . chezmoi.arch | replace "amd64" "x86_64" }}.tar.gz"
+    url: "{{ .doggo_base_url }}/v{{ .doggo_version }}/doggo_{{ .doggo_version }}_{{ .chezmoi.os | title }}_{{ .chezmoi.arch | replace "amd64" "x86_64" }}.tar.gz"
     include: 
       - "doggo"
 ".tools/nvim":
