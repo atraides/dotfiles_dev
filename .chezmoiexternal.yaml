@@ -12,6 +12,11 @@
     url: "{{ .lazygit_base_url }}/v{{ .lazygit_version }}/lazygit_{{ .lazygit_version }}_{{ .chezmoi.os }}_{{ .chezmoi.arch | replace "amd64" "x86_64" }}.tar.gz"
     include: 
       - "lazygit"
+"bin/":
+    type: "archive"
+    url: "{{ .doggo_base_url }}/v{{ .doggo_version }}/doggo_{{ .doggo_version }}_{{ .chezmoi.os }}_{{ . chezmoi.arch | replace "amd64" "x86_64" }}.tar.gz"
+    include: 
+      - "doggo"
 ".tools/nvim":
     type: "archive"
     url: "https://github.com/neovim/neovim/releases/download/v{{ .nvim_version }}/nvim-{{ .chezmoi.os | replace "darwin" "macos" }}-{{- .chezmoi.arch | replace "amd64" "x86_64" -}}.tar.gz"
