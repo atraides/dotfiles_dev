@@ -8,12 +8,12 @@
     url: "https://github.com/pyenv/pyenv-virtualenv.git"
     refreshPeriod: "168h"
 "bin/lazygit":
-    type: "archive"
+    type: "file"
     url: "{{ .lazygit_base_url }}/v{{ .lazygit_version }}/lazygit_{{ .lazygit_version }}_{{ .chezmoi.os }}_{{ .chezmoi.arch | replace "amd64" "x86_64" }}.tar.gz"
     include: 
       - "lazygit"
 "bin/doggo":
-    type: "archive"
+    type: "file"
     url: "{{ .doggo_base_url }}/v{{ .doggo_version }}/doggo_{{ .doggo_version }}_{{ .chezmoi.os | title }}_{{ .chezmoi.arch | replace "amd64" "x86_64" }}.tar.gz"
     include: 
       - "doggo"
