@@ -1,0 +1,22 @@
+# renovate: datasource=github-tags depName=pyenv/pyenv
+pyenv_version: "v2.6.10"
+# renovate: datasource=golang-version depName=go
+go_version: "1.25.2"
+# renovate: datasource=github-tags depName=jesseduffield/lazygit
+lazygit_version: "0.55.1"
+lazygit_base_url: "https://github.com/jesseduffield/lazygit/releases/download"
+# renovate: datasource=github-tags depName=neovim/neovim
+nvim_version: "0.11.4"
+# renovate: datasource=github-tags depName=nodejs/node
+nodejs_version: "v24.7.0"
+# renovate: datasource=github-tags depName=mr-karan/doggo
+doggo_version: "1.0.5"
+doggo_base_url: "https://github.com/mr-karan/doggo/releases/download"
+# renovate: datasource=github-tags depName=Dj-Codeman/dog_community
+doge_version: "v0.2.9"
+doge_base_url: "https://github.com/Dj-Codeman/dog_community/releases/download"
+{{- if eq .chezmoi.os "darwin" -}}
+doge_os_suffix: "apple-darwin-universal2"
+{{- else if eq .chezmoi.os "linux" -}}
+doge_os_suffix: "{{ .chezmoi.arch | replace "amd64" "x86_64"}}-unknown-linux-musl"
+{{- end }}
