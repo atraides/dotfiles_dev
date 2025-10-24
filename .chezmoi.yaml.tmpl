@@ -1,6 +1,18 @@
+# vim: syntax=yaml
+#
+
 git:
   autoCommit: false
   autoPush: false
 
 edit:
   command: "vi"
+
+data:
+{{- if .chezmio.os eq "darwin" -}}
+  doge_os_suffix: "apple-darwin-universal2"
+{{- else if eq .chezmoi.os "linux" -}}
+  doge_os_suffix: "{{ .chezmoi.os | replace "amd64" "x86_64" }}-unknown-linux-musl"
+{{- else -}}
+  doge_os_suffix: ""
+{{- end }}
