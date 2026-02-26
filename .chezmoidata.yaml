@@ -8,7 +8,7 @@ lazygit_base_url: "https://github.com/jesseduffield/lazygit/releases/download"
 # renovate: datasource=github-tags depName=neovim/neovim
 nvim_version: "0.11.6"
 # renovate: datasource=github-tags depName=nodejs/node
-nodejs_version: "v24.14.0"
+nodejs_version: "v25.7.0"
 # renovate: datasource=github-tags depName=mr-karan/doggo
 doggo_version: "1.1.5"
 doggo_base_url: "https://github.com/mr-karan/doggo/releases/download"
