@@ -24,7 +24,7 @@
     executable: true
     path: "doge-{{ .doge_version }}-{{ .doge_os_suffix }}"
 ".tools/go":
-    type: "archive-file"
+    type: "archive"
     url: "https://go.dev/dl/go{{ .go_version }}.{{ .chezmoi.os }}-{{ .chezmoi.arch }}.tar.gz"
     exact: false
     stripComponents: 1
