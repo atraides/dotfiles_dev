@@ -23,6 +23,11 @@
     url: "{{ .doge_base_url }}/{{ .doge_version }}/doge-{{ .doge_version }}-{{ .doge_os_suffix }}.zip"
     executable: true
     path: "doge-{{ .doge_version }}-{{ .doge_os_suffix }}"
+".tools/go":
+    type: "archive-file"
+    url: "https://go.dev/dl/go{{ .go_version }}.{{ .chezmoi.os }}-{{ .chezmoi.arch }}.tar.gz"
+    exact: false
+    stripComponents: 1
 ".tools/nvim":
     type: "archive"
     url: "https://github.com/neovim/neovim/releases/download/v{{ .nvim_version }}/nvim-{{ .chezmoi.os | replace "darwin" "macos" }}-{{- .chezmoi.arch | replace "amd64" "x86_64" -}}.tar.gz"
