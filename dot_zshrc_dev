@@ -3,6 +3,19 @@
 # gitignore.io
 function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/$@ ;}
 
+# Manual VS Code shell integration
+if [[ " $TERM_PROGRAM " == " vscode " ]] ; then
+  export VSCODE_INJECTION=1
+  precmd () {
+    echo -e " \033]633;A\007 "
+  }
+  preexec () {
+    echo -e " \033]633;B\007 "
+  }
+fi
+
+# User configuration
+
 if [[ -x ${HOME}/.local/bin/poetry ]]; then
   plugins+=("poetry");
 fi
