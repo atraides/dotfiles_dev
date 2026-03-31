@@ -6,7 +6,7 @@ go_version: "1.26.1"
 lazygit_version: "0.60.0"
 lazygit_base_url: "https://github.com/jesseduffield/lazygit/releases/download"
 # renovate: datasource=github-tags depName=neovim/neovim
-nvim_version: "0.11.6"
+nvim_version: "0.12.0"
 # renovate: datasource=github-tags depName=nodejs/node
 nodejs_version: "v25.8.1"
 # renovate: datasource=github-tags depName=mr-karan/doggo
