@@ -16,4 +16,4 @@ doggo_base_url: "https://github.com/mr-karan/doggo/releases/download"
 doge_version: "v0.2.9"
 doge_base_url: "https://github.com/Dj-Codeman/dog_community/releases/download"
 # renovate: datasource=github-tags depName=atraides/ssnvim
-ssnvim_version: "v0.2.1"
+ssnvim_version: "v0.2.3"
