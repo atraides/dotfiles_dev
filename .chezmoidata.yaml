@@ -3,7 +3,7 @@ pyenv_version: "v2.6.26"
 # renovate: datasource=golang-version depName=go
 go_version: "1.26.1"
 # renovate: datasource=github-tags depName=jesseduffield/lazygit
-lazygit_version: "0.60.0"
+lazygit_version: "0.61.0"
 lazygit_base_url: "https://github.com/jesseduffield/lazygit/releases/download"
 # renovate: datasource=github-tags depName=neovim/neovim
 nvim_version: "0.12.1"
