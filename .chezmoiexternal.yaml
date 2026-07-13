@@ -14,7 +14,7 @@
     path: "lazygit"
 "bin/doggo":
     type: "archive-file"
-    url: "{{ .doggo_base_url }}/v{{ .doggo_version }}/doggo_{{ .chezmoi.os | lower }}_{{ .chezmoi.arch | replace "amd64" "x86_64" }}.tar.gz"
+    url: "{{ .doggo_base_url }}/v{{ .doggo_version }}/doggo_{{ .chezmoi.os | lower }}_{{ .chezmoi.arch | replace "amd64" "x86_64" | replace "arm64" "aarch64" }}.tar.gz"
     stripComponents: 1
     executable: true
     path: "doggo"
